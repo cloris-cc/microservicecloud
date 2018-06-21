@@ -1,0 +1,4 @@
+org/cloris/service/DepartmentClientService.class
+org/cloris/domain/Department.class
+org/cloris/service/DepartmentClientServiceFallback$1.class
+org/cloris/service/DepartmentClientServiceFallback.class

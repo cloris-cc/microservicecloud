@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: eureka-server
+server: 
+  port: 7001
+eureka:
+  instance:
+    hostname: server1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://server1:7001/eureka/

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+server: 
+  port: 9527
+  
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: gateway 
+  client:
+    service-url:
+      defaultZone: http://server1:7001/eureka/,http://server2:7002/eureka/,http://server3:7003/eureka/
+      
+zuul:
+  ignored-services: microservice-dept 
+  routes: 
+    dept.serviceId: microservice-dept
+    dept.path: /cloris/**
+          
+  
+  

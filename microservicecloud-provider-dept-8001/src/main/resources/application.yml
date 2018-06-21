@@ -1,0 +1,24 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: microservice-dept
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: 123456
+mybatis:
+  type-aliases-package: org.cloris.domain
+  mapper-locations:
+  - classpath:mybatis/mapper/*.xml
+eureka:
+  instance:
+    instance-id: microservice-dept-8001
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://server1:7001/eureka/,http://server2:7002/eureka/,http://server3:7003/eureka/
+info:
+  app.name: 你的名字
+  author: cloris
+  build.artifactId: ${project.artifactId}

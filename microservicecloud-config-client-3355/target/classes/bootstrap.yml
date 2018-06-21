@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: application-client
+      profile: dev
+      label: master
+      uri: http://git:3344
